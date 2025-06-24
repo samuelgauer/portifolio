@@ -1,91 +1,1821 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width,initial-scale=1"/>
-  <title>Samuel Gauer – Gerente de TI</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Samuel Gauer – Gerente de TI | Especialista em Tecnologia e Inovação</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon.png">
+  <link rel="manifest" href="site.webmanifest">
+  <link href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
-    * { margin:0; padding:0; box-sizing: border-box; }
-    body { font-family:'Inter', sans-serif; color:#222; line-height:1.6; background:#fff;}
-    .container { width:90%; max-width:800px; margin:2rem auto; }
-    header { text-align:center; margin-bottom:2rem; }
-    header img { width:160px; height:160px; border-radius:50%; object-fit:cover; }
-    h1 { margin-top:1rem; font-size:2rem; font-weight:700; }
-    p.subtitle { color:#555; margin-top:0.5rem; }
-    nav { margin-top:1rem; }
-    nav a { margin:0 0.5rem; color:#0a66c2; text-decoration:none; font-weight:600;}
-    section { margin-bottom:2rem; }
-    section h2 { font-size:1.5rem; color:#0a66c2; margin-bottom:1rem; border-left:4px solid #0a66c2; padding-left:0.5rem;}
-    section ul { list-style-type: disc; padding-left:1.5rem; }
-    section ul li { margin-bottom:0.5rem;}
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      color: #1d1d1f;
+      line-height: 1.47059;
+      background: linear-gradient(135deg, #ffffff 0%, #f5f5f7 50%, #ffffff 100%);
+      font-weight: 400;
+      letter-spacing: -0.022em;
+      min-height: 100vh;
+    }
+
+    .container {
+      max-width: 100%;
+      margin: 0 auto;
+      padding: 0;
+    }
+
+    .content-wrapper {
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 0 22px;
+    }
+
+    .content-wrapper.projects {
+      max-width: 80%;
+      margin: 0 auto;
+      padding: 0 22px;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 0;
+      padding: 80px 22px 60px;
+      background: linear-gradient(135deg, #ffffff 0%, #f0f4ff 100%);
+      width: 100%;
+    }
+
+    .profile-image {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 40px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+    }
+
+    h1 {
+      font-size: 48px;
+      font-weight: 600;
+      color: #1d1d1f;
+      margin-bottom: 16px;
+      letter-spacing: -0.003em;
+    }
+
+    .title {
+      font-size: 24px;
+      color: #86868b;
+      font-weight: 400;
+      margin-bottom: 24px;
+      letter-spacing: 0.004em;
+    }
+
+    .location {
+      color: #86868b;
+      font-size: 17px;
+      margin-bottom: 40px;
+      font-weight: 400;
+    }
+
+    .contact-info {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: #06c;
+      text-decoration: none;
+      font-weight: 400;
+      font-size: 17px;
+      transition: color 0.2s ease;
+    }
+
+    .contact-item:hover {
+      color: #0077ed;
+    }
+
+    .contact-item i {
+      color: #06c;
+      font-size: 18px;
+    }
+
+    .linkedin-btn {
+      background: #06c;
+      color: white;
+      padding: 12px 24px;
+      border-radius: 980px;
+      text-decoration: none;
+      font-weight: 400;
+      font-size: 17px;
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .linkedin-btn:hover {
+      background: #0077ed;
+      transform: scale(1.02);
+    }
+
+    section {
+      margin-bottom: 0;
+      padding: 80px 22px;
+      width: 100%;
+    }
+
+    #sobre {
+      background: linear-gradient(135deg, #ffffff 0%, #f5f5f7 100%);
+    }
+
+    #especialidades {
+      background: linear-gradient(135deg, #ffffff 0%, #f0f4ff 100%);
+    }
+
+    #tecnologia {
+      background: linear-gradient(135deg, #ffffff 0%, #f5f5f7 100%);
+    }
+
+    #projetos {
+      background: linear-gradient(135deg, #ffffff 0%, #f0f8f0 100%);
+    }
+
+    #formacao {
+      background: linear-gradient(135deg, #ffffff 0%, #f0f4ff 100%);
+    }
+
+    #experiencia {
+      background: linear-gradient(135deg, #ffffff 0%, #f5f5f7 100%);
+    }
+
+    section h2 {
+      font-size: 40px;
+      color: #1d1d1f;
+      margin-bottom: 40px;
+      font-weight: 600;
+      letter-spacing: -0.003em;
+      text-align: center;
+    }
+
+    .about-text {
+      font-size: 21px;
+      color: #1d1d1f;
+      margin-bottom: 24px;
+      line-height: 1.47059;
+      font-weight: 400;
+      text-align: center;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 40px;
+      margin-top: 40px;
+    }
+
+    .skill-category {
+      background: #fbfbfd;
+      padding: 40px 32px;
+      border-radius: 18px;
+      text-align: center;
+      transition: transform 0.2s ease;
+    }
+
+    .skill-category:hover {
+      /* Efeito de hover removido */
+    }
+
+    .skill-category h3 {
+      color: #1d1d1f;
+      font-size: 24px;
+      margin-bottom: 24px;
+      font-weight: 600;
+      letter-spacing: -0.003em;
+    }
+
+    .skill-category ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .skill-category li {
+      margin-bottom: 16px;
+      color: #86868b;
+      font-size: 17px;
+      line-height: 1.47059;
+    }
+
+    .tech-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 32px;
+      margin-top: 40px;
+    }
+
+    .tech-item {
+      background: #fbfbfd;
+      padding: 32px 24px;
+      border-radius: 18px;
+      text-align: center;
+      transition: transform 0.2s ease;
+    }
+
+    .tech-item:hover {
+      /* Efeito de hover removido */
+    }
+
+    .tech-item h4 {
+      color: #1d1d1f;
+      font-size: 21px;
+      margin-bottom: 16px;
+      font-weight: 600;
+      letter-spacing: -0.003em;
+    }
+
+    .tech-item p {
+      color: #86868b;
+      font-size: 17px;
+      line-height: 1.47059;
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 32px;
+      margin-top: 40px;
+    }
+
+    .project-card {
+      background: #fbfbfd;
+      border-radius: 18px;
+      padding: 40px 32px;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+      position: relative;
+    }
+
+    .project-card:hover {
+      /* Efeito de hover removido */
+    }
+
+    .project-content {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      z-index: 2;
+    }
+
+    .project-description {
+      margin-bottom: 32px;
+      position: relative;
+    }
+
+    .project-description p {
+      color: #1d1d1f;
+      line-height: 1.47059;
+      font-size: 17px;
+      margin-bottom: 16px;
+    }
+
+    .project-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 24px;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .project-header h3 {
+      color: #1d1d1f;
+      font-size: 24px;
+      font-weight: 600;
+      margin: 0;
+      flex: 1;
+      min-width: 200px;
+      letter-spacing: -0.003em;
+    }
+
+    .project-period {
+      background: #06c;
+      color: white;
+      padding: 6px 12px;
+      border-radius: 980px;
+      font-size: 12px;
+      font-weight: 500;
+      white-space: nowrap;
+    }
+
+    .project-company {
+      color: #06c;
+      font-weight: 500;
+      font-size: 15px;
+      margin-bottom: 8px;
+    }
+
+    .project-role {
+      color: #86868b;
+      font-size: 15px;
+      margin-bottom: 20px;
+      font-style: italic;
+    }
+
+    .project-tech {
+      margin-bottom: 24px;
+    }
+
+    .project-tech h4 {
+      color: #1d1d1f;
+      font-size: 18px;
+      margin-bottom: 12px;
+      font-weight: 600;
+      letter-spacing: -0.003em;
+    }
+
+    .project-tech p {
+      color: #86868b;
+      font-size: 14px;
+      background: #ffffff;
+      padding: 12px 16px;
+      border-radius: 12px;
+      border: 1px solid #d2d2d7;
+    }
+
+    .project-results {
+      background: #e8f5e8;
+      padding: 20px;
+      border-radius: 12px;
+    }
+
+    .project-results h4 {
+      color: #1d1d1f;
+      font-size: 18px;
+      margin-bottom: 12px;
+      font-weight: 600;
+      letter-spacing: -0.003em;
+    }
+
+    .project-results ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .project-results li {
+      color: #1d1d1f;
+      font-size: 14px;
+      margin-bottom: 8px;
+      padding-left: 0;
+      position: relative;
+      line-height: 1.47059;
+    }
+
+    .experience-timeline {
+      position: relative;
+      padding-left: 40px;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .experience-timeline::before {
+      content: '';
+      position: absolute;
+      left: 20px;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: #d2d2d7;
+    }
+
+    .experience-item {
+      position: relative;
+      margin-bottom: 40px;
+      padding-left: 40px;
+    }
+
+    .experience-item::before {
+      content: '';
+      position: absolute;
+      left: -8px;
+      top: 8px;
+      width: 16px;
+      height: 16px;
+      background: #06c;
+      border-radius: 50%;
+      border: 4px solid white;
+      box-shadow: 0 0 0 2px #d2d2d7;
+    }
+
+    .experience-item h4 {
+      color: #1d1d1f;
+      font-size: 24px;
+      margin-bottom: 8px;
+      font-weight: 600;
+      letter-spacing: -0.003em;
+    }
+
+    .experience-item .company {
+      color: #06c;
+      font-weight: 500;
+      font-size: 17px;
+    }
+
+    .experience-item .period {
+      color: #86868b;
+      font-size: 17px;
+      margin-bottom: 8px;
+    }
+
+    .education-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 40px;
+      margin-top: 40px;
+    }
+
+    .education-item {
+      background: #fbfbfd;
+      padding: 40px 32px;
+      border-radius: 18px;
+      text-align: center;
+      transition: transform 0.2s ease;
+    }
+
+    .education-item:hover {
+      /* Efeito de hover removido */
+    }
+
+    .education-item h4 {
+      color: #1d1d1f;
+      font-size: 21px;
+      margin-bottom: 16px;
+      font-weight: 600;
+      letter-spacing: -0.003em;
+    }
+
+    .education-item .institution {
+      color: #06c;
+      font-weight: 500;
+      font-size: 17px;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        padding: 0;
+      }
+
+      .content-wrapper {
+        padding: 0 16px;
+      }
+
+      header {
+        padding: 60px 16px 40px;
+        margin-bottom: 0;
+      }
+
+      section {
+        padding: 60px 16px;
+        margin-bottom: 0;
+      }
+
+      h1 {
+        font-size: 32px;
+      }
+
+      .title {
+        font-size: 21px;
+      }
+
+      section h2 {
+        font-size: 32px;
+      }
+
+      .contact-info {
+        flex-direction: column;
+        gap: 24px;
+        align-items: center;
+      }
+
+      .skills-grid,
+      .tech-grid,
+      .education-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+
+      .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+
+      .project-card {
+        padding: 24px 20px;
+      }
+
+      .project-header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .project-header h3 {
+        min-width: auto;
+        font-size: 20px;
+      }
+
+      .about-text {
+        font-size: 19px;
+        text-align: left;
+      }
+
+      .experience-timeline {
+        padding-left: 24px;
+      }
+
+      .experience-timeline::before {
+        left: 12px;
+      }
+
+      .experience-item {
+        padding-left: 24px;
+      }
+
+      .experience-item::before {
+        left: -4px;
+      }
+    }
+
+    /* Media query para tablets */
+    @media (min-width: 769px) and (max-width: 1024px) {
+      .content-wrapper.projects {
+        max-width: 90%;
+      }
+
+      .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 28px;
+      }
+
+      .project-card {
+        padding: 32px 28px;
+      }
+
+      .project-header h3 {
+        font-size: 22px;
+      }
+
+      .project-description p {
+        font-size: 16px;
+      }
+
+      .skills-grid,
+      .tech-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 32px;
+      }
+
+      .education-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 32px;
+      }
+
+      .floating-navbar .content {
+        padding: 0 16px;
+        gap: 16px;
+      }
+
+      .floating-navbar .contact-section {
+        gap: 12px;
+      }
+
+      .floating-navbar .contact-item {
+        font-size: 13px;
+      }
+    }
+
+    /* Media query para telas muito grandes */
+    @media (min-width: 1400px) {
+      .content-wrapper.projects {
+        max-width: 1200px;
+      }
+
+      .projects-grid {
+        gap: 32px;
+      }
+
+      .project-card {
+        padding: 40px 32px;
+      }
+
+      .project-header h3 {
+        font-size: 26px;
+      }
+
+      .project-description p {
+        font-size: 16px;
+      }
+    }
+
+    /* Efeito de brilho no hover */
+    .project-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+      transition: left 0.5s;
+      border-radius: 18px;
+      z-index: 1;
+      pointer-events: none;
+      display: none;
+      /* Desabilitado */
+    }
+
+    .project-card:hover::before {
+      /* Efeito de brilho removido */
+    }
+
+    /* Barra de menu flutuante */
+    .floating-navbar {
+      position: fixed;
+      top: -100px;
+      left: 0;
+      right: 0;
+      background: #ffffff;
+      border-bottom: 1px solid #d2d2d7;
+      padding: 8px 0;
+      z-index: 9999;
+      transition: top 0.3s ease;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .floating-navbar.visible {
+      top: 0;
+    }
+
+    .floating-navbar .content {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 22px;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .floating-navbar .profile-section {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      height: 32px;
+    }
+
+    .floating-navbar .profile-image {
+      width: 32px;
+      height: 32px;
+      margin-top: 40px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+      flex-shrink: 0;
+    }
+
+    .floating-navbar .profile-info {
+      display: flex;
+      flex-direction: column;
+      gap: 1px;
+      justify-content: center;
+      height: 100%;
+    }
+
+    .floating-navbar .profile-name {
+      font-size: 14px;
+      font-weight: 600;
+      color: #1d1d1f;
+      margin: 0;
+      line-height: 1.2;
+    }
+
+    .floating-navbar .profile-title {
+      font-size: 11px;
+      color: #86868b;
+      margin: 0;
+      line-height: 1.2;
+    }
+
+    .floating-navbar .contact-section {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      height: 36px;
+    }
+
+    .floating-navbar .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      color: #06c;
+      text-decoration: none;
+      font-weight: 400;
+      font-size: 12px;
+      transition: color 0.2s ease;
+    }
+
+    .floating-navbar .contact-item:hover {
+      color: #0077ed;
+    }
+
+    .floating-navbar .contact-item i {
+      color: #06c;
+      font-size: 12px;
+    }
+
+    .floating-navbar .linkedin-btn {
+      background: #06c;
+      color: white;
+      padding: 6px 12px;
+      border-radius: 980px;
+      text-decoration: none;
+      font-weight: 400;
+      font-size: 12px;
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .floating-navbar .linkedin-btn:hover {
+      background: #0077ed;
+      transform: scale(1.02);
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        padding: 0;
+      }
+
+      .content-wrapper {
+        padding: 0 16px;
+      }
+
+      .content-wrapper.projects {
+        max-width: 95%;
+        padding: 0 16px;
+      }
+
+      header {
+        padding: 60px 16px 40px;
+        margin-bottom: 0;
+      }
+
+      section {
+        padding: 60px 16px;
+        margin-bottom: 0;
+      }
+
+      h1 {
+        font-size: 32px;
+      }
+
+      .title {
+        font-size: 21px;
+      }
+
+      section h2 {
+        font-size: 32px;
+      }
+
+      .contact-info {
+        flex-direction: column;
+        gap: 24px;
+        align-items: center;
+      }
+
+      .skills-grid,
+      .tech-grid,
+      .education-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+
+      .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+
+      .project-card {
+        padding: 24px 20px;
+      }
+
+      .project-header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .project-header h3 {
+        min-width: auto;
+        font-size: 20px;
+      }
+
+      .about-text {
+        font-size: 19px;
+        text-align: left;
+      }
+
+      .experience-timeline {
+        padding-left: 24px;
+      }
+
+      .experience-timeline::before {
+        left: 12px;
+      }
+
+      .experience-item {
+        padding-left: 24px;
+      }
+
+      .experience-item::before {
+        left: -4px;
+      }
+
+      /* Barra flutuante mobile */
+      .floating-navbar .content {
+        padding: 0 12px;
+        gap: 8px;
+        align-items: flex-start;
+      }
+
+      .floating-navbar .profile-section {
+        gap: 8px;
+        height: 32px;
+      }
+
+      .floating-navbar .profile-image {
+        width: 32px;
+        height: 32px;
+      }
+
+      .floating-navbar .profile-name {
+        font-size: 12px;
+      }
+
+      .floating-navbar .profile-title {
+        font-size: 10px;
+      }
+
+      .floating-navbar .contact-section {
+        gap: 8px;
+        height: 32px;
+      }
+
+      .floating-navbar .contact-item {
+        font-size: 10px;
+        gap: 2px;
+      }
+
+      .floating-navbar .contact-item i {
+        font-size: 10px;
+      }
+
+      .floating-navbar .linkedin-btn {
+        font-size: 10px;
+        padding: 4px 8px;
+        gap: 2px;
+      }
+    }
+
+    /* Modal/Popup para projetos */
+    .project-modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(10px);
+      z-index: 2000;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .project-modal.active {
+      display: flex;
+    }
+
+    .project-modal-content {
+      background: #fbfbfd;
+      border-radius: 18px;
+      padding: 40px;
+      max-width: 600px;
+      width: 100%;
+      max-height: 80vh;
+      overflow-y: auto;
+      position: relative;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    }
+
+    .project-modal-close {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: none;
+      border: none;
+      font-size: 24px;
+      color: #86868b;
+      cursor: pointer;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s ease;
+    }
+
+    .project-modal-close:hover {
+      background: #f2f2f2;
+      color: #1d1d1f;
+    }
+
+    .project-modal-header {
+      margin-bottom: 24px;
+      padding-right: 40px;
+    }
+
+    .project-modal-header h3 {
+      font-size: 28px;
+      font-weight: 600;
+      color: #1d1d1f;
+      margin: 0 0 8px 0;
+      letter-spacing: -0.003em;
+    }
+
+    .project-modal-period {
+      background: #06c;
+      color: white;
+      padding: 8px 16px;
+      border-radius: 980px;
+      font-size: 14px;
+      font-weight: 500;
+      display: inline-block;
+      margin-bottom: 16px;
+    }
+
+    .project-modal-company {
+      color: #06c;
+      font-weight: 500;
+      font-size: 17px;
+      margin-bottom: 8px;
+    }
+
+    .project-modal-role {
+      color: #86868b;
+      font-size: 17px;
+      margin-bottom: 24px;
+      font-style: italic;
+    }
+
+    .project-modal-description {
+      margin-bottom: 32px;
+    }
+
+    .project-modal-description p {
+      color: #1d1d1f;
+      line-height: 1.6;
+      font-size: 17px;
+      margin-bottom: 16px;
+    }
+
+    .project-modal-tech {
+      margin-bottom: 32px;
+    }
+
+    .project-modal-tech h4 {
+      color: #1d1d1f;
+      font-size: 21px;
+      margin-bottom: 16px;
+      font-weight: 600;
+      letter-spacing: -0.003em;
+    }
+
+    .project-modal-tech p {
+      color: #86868b;
+      font-size: 17px;
+      background: #ffffff;
+      padding: 16px 20px;
+      border-radius: 12px;
+      border: 1px solid #d2d2d7;
+    }
+
+    .project-modal-results {
+      background: #e8f5e8;
+      padding: 24px;
+      border-radius: 12px;
+    }
+
+    .project-modal-results h4 {
+      color: #1d1d1f;
+      font-size: 21px;
+      margin-bottom: 16px;
+      font-weight: 600;
+      letter-spacing: -0.003em;
+    }
+
+    .project-modal-results ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .project-modal-results li {
+      color: #1d1d1f;
+      font-size: 17px;
+      margin-bottom: 12px;
+      padding-left: 0;
+      position: relative;
+      line-height: 1.6;
+    }
+
+    .saiba-mais-btn {
+      background: #06c;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 980px;
+      font-size: 14px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      font-family: inherit;
+      margin-top: 16px;
+      position: relative;
+      z-index: 10;
+    }
+
+    .saiba-mais-btn:hover {
+      background: #0077ed;
+      transform: scale(1.05);
+    }
+
+    /* Seção de Agradecimento */
+    #agradecimento {
+      background: linear-gradient(135deg, #1e3a8a 0%, #0f172a 100%);
+      color: white;
+    }
+
+    #agradecimento h2 {
+      color: white;
+    }
+
+    .thank-you-content {
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .thank-you-text {
+      font-size: 21px;
+      color: #e2e8f0;
+      margin-bottom: 32px;
+      line-height: 1.6;
+      font-weight: 400;
+    }
+
+    .contact-highlight {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 18px;
+      padding: 40px 32px;
+      margin-top: 40px;
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .contact-highlight h3 {
+      color: white;
+      font-size: 28px;
+      margin-bottom: 32px;
+      font-weight: 600;
+      letter-spacing: -0.003em;
+    }
+
+    .contact-methods {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .contact-highlight-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: #60a5fa;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 18px;
+      padding: 16px 24px;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      transition: all 0.3s ease;
+    }
+
+    .contact-highlight-item:hover {
+      background: rgba(255, 255, 255, 0.2);
+      color: #93c5fd;
+      transform: translateY(-2px);
+    }
+
+    .contact-highlight-item i {
+      font-size: 20px;
+    }
+
+    /* Media queries para a seção de agradecimento */
+    @media (max-width: 768px) {
+      .thank-you-text {
+        font-size: 19px;
+        text-align: left;
+      }
+
+      .contact-highlight {
+        padding: 32px 24px;
+      }
+
+      .contact-highlight h3 {
+        font-size: 24px;
+      }
+
+      .contact-methods {
+        flex-direction: column;
+        gap: 16px;
+      }
+
+      .contact-highlight-item {
+        font-size: 16px;
+        padding: 14px 20px;
+        justify-content: center;
+      }
+    }
+
+    @media (min-width: 769px) and (max-width: 1024px) {
+      .contact-methods {
+        gap: 32px;
+      }
+
+      .contact-highlight-item {
+        font-size: 17px;
+        padding: 14px 20px;
+      }
+    }
   </style>
 </head>
+
 <body>
+
+  <!-- Barra de menu flutuante -->
+  <nav class="floating-navbar" id="floatingNavbar">
+    <div class="content">
+      <div class="profile-section">
+        <img src="IMG_2582.JPEG" alt="Samuel Walter Gauer" class="profile-image">
+        <div class="profile-info">
+          <h3 class="profile-name">Samuel Walter Gauer</h3>
+          <p class="profile-title">Gerente de TI</p>
+        </div>
+      </div>
+      <div class="contact-section">
+        <a href="https://wa.me/5548999892028?text=Olá%20Samuel!%20Vi%20seu%20portfólio%20e%20gostaria%20de%20conversar%20sobre%20oportunidades%20profissionais."
+          target="_blank" class="contact-item">
+          <i class="fab fa-whatsapp"></i>
+          +55 48 99989-2028
+        </a>
+        <a href="https://www.linkedin.com/in/samuel-walter-gauer/" target="_blank" class="linkedin-btn">
+          <i class="fab fa-linkedin"></i>
+          LinkedIn
+        </a>
+      </div>
+    </div>
+  </nav>
 
   <div class="container">
     <header>
-      <img src="IMG_2582.jpg" alt="Samuel Gauer">
-      <h1>Samuel Walter Gauer</h1>
-      <p class="subtitle">Gerente de TI • Tecnologia, Liderança e Inovação</p>
-      <nav>
-        <a href="mailto:samuelgauer@gmail.com"><i class="fas fa-envelope"></i> Email</a>
-        <a href="tel:+5548999892028"><i class="fas fa-phone"></i> Tel</a>
-        <a href="https://www.linkedin.com/in/samuel-walter-gauer/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
-      </nav>
+      <div class="content-wrapper">
+        <img src="IMG_2582.JPEG" alt="Samuel Walter Gauer" class="profile-image">
+        <h1>Samuel Walter Gauer</h1>
+        <p class="title">Tecnologia, Inovação e Liderança Estratégica</p>
+        <p class="location">Florianópolis/SC | Disponível para mudanças e viagens</p>
+
+        <div class="contact-info">
+          <a href="https://wa.me/5548999892028?text=Olá%20Samuel!%20Vi%20seu%20portfólio%20e%20gostaria%20de%20conversar%20sobre%20oportunidades%20profissionais."
+            target="_blank" class="contact-item">
+            <i class="fab fa-whatsapp"></i>
+            +55 48 99989-2028
+          </a>
+        </div>
+
+        <a href="https://www.linkedin.com/in/samuel-walter-gauer/" target="_blank" class="linkedin-btn">
+          <i class="fab fa-linkedin"></i>
+          LinkedIn
+        </a>
+      </div>
     </header>
 
     <section id="sobre">
-      <h2>Sobre mim</h2>
-      <p>Sou um profissional apaixonado por tecnologia, gestão e por transformar ideias em soluções concretas. Atuo como <strong>Gerente de TI</strong> com mais de 25 anos de experiência, unindo sólida base técnica com liderança de equipes, gestão de projetos e inovação digital. Gosto de estar lado a lado com o time, entendendo os desafios técnicos; quando necessário, coloco a mão no teclado para resolver problemas complexos, sem perder o foco nos objetivos do projeto.</p>
+      <div class="content-wrapper">
+        <h2>Sobre mim</h2>
+        <p class="about-text">
+          Sou um profissional apaixonado por tecnologia, gestão e por transformar ideias em soluções concretas. Atuo
+          como
+          <strong>Gerente de TI</strong> com mais de 25 anos de experiência, unindo uma sólida base técnica com
+          habilidades comprovadas em liderança de times de alta performance, gestão de projetos e inovação digital.
+        </p>
+        <p class="about-text">
+          Tenho o perfil de um líder que inspira e acompanha de perto: gosto de estar junto com o time, entender os
+          desafios técnicos e, se necessário, colocar a mão no teclado para resolver problemas complexos. Valorizo a
+          empatia, a escuta ativa e o ambiente colaborativo, sem perder o foco nos resultados, prazos e metas do
+          negócio.
+        </p>
+        <p class="about-text">
+          Sou movido por desafios e pela construção de soluções robustas, escaláveis e de alto impacto, com foco na
+          sustentabilidade dos projetos e no sucesso do cliente.
+        </p>
+      </div>
     </section>
 
-    <section id="habilidades">
-      <h2>Especialidades</h2>
-      <ul>
-        <li>Liderança e desenvolvimento de times multidisciplinares</li>
-        <li>Gestão de projetos – PMBOK, Scrum, COBIT</li>
-        <li>Operações, SLAs, otimização e compliance</li>
-        <li>Transformação digital e automação</li>
-        <li>Relacionamento com stakeholders e alta gestão</li>
-        <li>Análise estratégica com foco em indicadores (KPIs)</li>
-      </ul>
+    <section id="projetos">
+      <div class="content-wrapper projects">
+        <h2>Projetos Destacados</h2>
+        <div class="projects-grid">
+          <div class="project-card">
+            <div class="project-content">
+              <div class="project-header">
+                <h3>Sistema de Gestão Empresarial Integrado</h3>
+                <span class="project-period">2021 - Atual</span>
+              </div>
+              <p class="project-company">EasyApps TI</p>
+              <p class="project-role">Gerente de Projetos de TI</p>
+              <div class="project-description">
+                <p>Esse projeto me proporcionou a oportunidade de aprofundar meus conhecimentos em <b>desenvolvimento
+                    para plataformas móveis</b>, atuando diretamente na criação de aplicações para <b>iOS e Android</b>
+                  por meio de tecnologias <b>híbridas</b>, com foco em desempenho, escalabilidade e experiência do
+                  usuário.</p>
+              </div>
+              <div class="project-tech">
+                <h4>Tecnologias</h4>
+                <p>Flutter, Node.js, Python, GCP, Firebase</p>
+              </div>
+              <div class="project-results">
+                <h4>Resultados</h4>
+                <ul>
+                  <li>Validação do MVP com base solida de clientes</li>
+                </ul>
+              </div>
+              <button class="saiba-mais-btn" onclick="openProjectModal(0)">Saiba mais</button>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-content">
+              <div class="project-header">
+                <h3>Plataforma de E-commerce Mobile</h3>
+                <span class="project-period">2017 - 2021</span>
+              </div>
+              <p class="project-company">E-SWG</p>
+              <p class="project-role">Gerente de Produtos</p>
+              <div class="project-description">
+                <p>Atuei como <b>Gerente de TI</b>, liderando uma equipe multidisciplinar composta por desenvolvedores,
+                  analistas, designers e profissionais de suporte. Minha responsabilidade foi desde o alinhamento
+                  estratégico até a execução técnica do projeto, promovendo a integração entre as áreas e garantindo a
+                  entrega de valor contínuo.</p>
+              </div>
+              <div class="project-tech">
+                <h4>Tecnologias</h4>
+                <p>C#, VueJS, PostgreSQL</p>
+              </div>
+              <div class="project-results">
+                <h4>Resultados</h4>
+                <ul>
+                  <li>MVP aceito pelo cliente com satisfação</li>
+                </ul>
+              </div>
+              <button class="saiba-mais-btn" onclick="openProjectModal(1)">Saiba mais</button>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-content">
+              <div class="project-header">
+                <h3>Sistema de Gestão Administrativa</h3>
+                <span class="project-period">2001 - 2017</span>
+              </div>
+              <p class="project-company">Khor Tecnologia da Informação</p>
+              <p class="project-role">Gerente de Projetos, Analista, Desenvolvedor</p>
+              <div class="project-description">
+                <p>Neste projeto, tive a oportunidade de atuar por mais de 15 anos, o que me permitiu vivenciar todas as
+                  fases e funções possíveis dentro de uma grande equipe multidisciplinar. Ao longo desse período, exerci
+                  diferentes papéis conforme as demandas e a evolução do projeto: atuei como <b>desenvolvedor, analista
+                    de sistemas, gerente de projeto, responsável por recrutamento e formação de equipe</b>, além de
+                  conduzir <b>treinamentos com usuários e representar o projeto em apresentações nacionais</b>.</p>
+              </div>
+              <div class="project-tech">
+                <h4>Tecnologias</h4>
+                <p>C#, Delphi, SQL Server, Crystal Reports, APIs</p>
+              </div>
+              <div class="project-results">
+                <h4>Resultados</h4>
+                <ul>
+                  <li>Desenvolvimento de um ERP completo, com mais de 30 módulos</li>
+                  <li>Implementado em todas os 200+ escritorios regionais</li>
+                  <li>Integração de todos os processos administrativos</li>
+                  <li>Eficiencia no processamento administrativo</li>
+                </ul>
+              </div>
+              <button class="saiba-mais-btn" onclick="openProjectModal(2)">Saiba mais</button>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-content">
+              <div class="project-header">
+                <h3>Sistema de Processsamento de Imagens</h3>
+                <span class="project-period">1998 - 2001</span>
+              </div>
+              <p class="project-company">Kopp Tecnologia</p>
+              <p class="project-role">Analista\Desenvolvedor, Lider de Equipe</p>
+              <div class="project-description">
+                <p>Tive a oportunidade de participar deste projeto desde o seu início, quando a empresa delegou
+                  exclusivamente a mim toda a responsabilidade pelo desenvolvimento da solução. Assumi desde o
+                  levantamento de requisitos, análise técnica, arquitetura e implementação, até os testes e validações
+                  finais.</p>
+              </div>
+              <div class="project-tech">
+                <h4>Tecnologias</h4>
+                <p>Delphi, Firabase, Integração com APIs</p>
+              </div>
+              <div class="project-results">
+                <h4>Resultados</h4>
+                <ul>
+                  <li>Agilidade no processamento de multas</li>
+                  <li>Melhor aproveitamento de imagens capturadas</li>
+                  <li>Aumento significativo na conversão das infrações de trânsito</li>
+                  <li>Sistema compativel com todos Departamentos de Trânsito do Estaduais</li>
+                </ul>
+              </div>
+              <button class="saiba-mais-btn" onclick="openProjectModal(3)">Saiba mais</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="especialidades">
+      <div class="content-wrapper">
+        <h2>Minhas Especialidades</h2>
+        <div class="skills-grid">
+          <div class="skill-category">
+            <h3>Gestão de Times</h3>
+            <ul>
+              <li>Recrutamento, formação e desenvolvimento de equipes próprias e terceirizadas multidisciplinares</li>
+              <li>Foco em produtividade, qualidade e cultura organizacional</li>
+            </ul>
+          </div>
+
+          <div class="skill-category">
+            <h3>Gerenciamento de Projetos</h3>
+            <ul>
+              <li>Do levantamento de requisitos ao código</li>
+              <li>Documentação técnica</li>
+              <li>Planejamento estratégico, análise de riscos e viabilidade</li>
+            </ul>
+          </div>
+
+          <div class="skill-category">
+            <h3>Operações e Eficiência</h3>
+            <ul>
+              <li>Otimização de SLAs, controle orçamentário</li>
+              <li>Redução de custos, compliance, LGPD</li>
+              <li>Políticas de segurança</li>
+            </ul>
+          </div>
+
+          <div class="skill-category">
+            <h3>Transformação Digital</h3>
+            <ul>
+              <li>Implementação de sistemas modernos</li>
+              <li>Integração com legados, automação de processos</li>
+              <li>Migração para ambientes Cloud</li>
+            </ul>
+          </div>
+
+          <div class="skill-category">
+            <h3>Relacionamento</h3>
+            <ul>
+              <li>Atendimento e negociação com clientes</li>
+              <li>Fornecedores, órgãos reguladores</li>
+              <li>Alta gestão</li>
+            </ul>
+          </div>
+
+          <div class="skill-category">
+            <h3>Visão Estratégica</h3>
+            <ul>
+              <li>Foco em indicadores (KPIs)</li>
+              <li>Melhoria contínua (BPM, ITIL, Scrum, COBIT)</li>
+              <li>Transformação cultural e entrega de valor</li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section id="tecnologia">
-      <h2>Conhecimentos Técnicos</h2>
-      <ul>
-        <li>Flutter, Node.js, Delphi</li>
-        <li>Bancos de dados Relacionais e NoSQL</li>
-        <li>Desenvolvimento e publicação: Windows, Web, iOS, Android</li>
-        <li>Git, virtualização, testes, automação e Cloud</li>
-        <li>Conhecimento em Inteligência Artificial</li>
-        <li>Metodologias ágeis – Scrum, ITIL, COBIT</li>
-      </ul>
+      <div class="content-wrapper">
+        <h2>Conhecimentos Técnicos</h2>
+        <div class="tech-grid">
+          <div class="tech-item">
+            <h4>Linguagens e Frameworks</h4>
+            <p>Flutter, Python, Node.js, Delphi, C#, JavaScript, VueJS, HTML, CSS</p>
+          </div>
+
+          <div class="tech-item">
+            <h4>Bancos de Dados</h4>
+            <p>PostgreSQL, SQL Server, Oracle, MongoDB, MySql</p>
+            <p>Bancos Relacionais e NoSQL</p>
+          </div>
+
+          <div class="tech-item">
+            <h4>Cloud Computing</h4>
+            <p>AWS, Google Cloud Platform, Microsoft Azure</p>
+          </div>
+
+          <div class="tech-item">
+            <h4>Containerização e Orquestração</h4>
+            <p>Docker, Kubernetes, Microsserviços</p>
+          </div>
+
+          <div class="tech-item">
+            <h4>DevOps e Infraestrutura</h4>
+            <p>Git, CI/CD, Virtualização, Autenticação, Testes, Integração de Sistemas</p>
+          </div>
+
+          <div class="tech-item">
+            <h4>Plataformas e Publicação</h4>
+            <p>Windows, Linux, MacOs</p>
+            <p>iOS, Android, Web, Desktop</p>
+            <p> Integrações, APIs REST, SOAP</p>
+          </div>
+
+          <div class="tech-item">
+            <h4>IA e Automação</h4>
+            <p>Inteligência Artificial, Automação de Processos, Machine Learning</p>
+          </div>
+
+          <div class="tech-item">
+            <h4>Metodologias e Frameworks</h4>
+            <p>Scrum, PMBOK, ITIL, COBIT, Agile, Lean</p>
+          </div>
+
+          <div class="tech-item">
+            <h4>Idiomas</h4>
+            <p>Português (Nativo), Inglês (Intermediário)</p>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section id="formacao">
-      <h2>Formação</h2>
-      <ul>
-        <li>Pós-graduação em Arquitetura de Softwares – XPE</li>
-        <li>MBA em Gestão de Negócios – FGV</li>
-        <li>Bacharel em Sistemas de Informação – Barddal</li>
-        <li>Técnico em Processamento de Dados – Cristo Redentor</li>
-      </ul>
+      <div class="content-wrapper">
+        <h2>Formação</h2>
+        <div class="education-grid">
+          <div class="education-item">
+            <h4>Pós-graduação em Arquitetura de Softwares e Soluções</h4>
+            <p class="institution">Faculdade XPE</p>
+          </div>
+
+          <div class="education-item">
+            <h4>MBA em Gestão de Negócios</h4>
+            <p class="institution">FGV - Fundação Getúlio Vargas</p>
+          </div>
+
+          <div class="education-item">
+            <h4>Bacharel em Sistemas de Informação</h4>
+            <p class="institution">Faculdade Barddal</p>
+          </div>
+
+          <div class="education-item">
+            <h4>Técnico em Processamento de Dados</h4>
+            <p class="institution">Colégio Cristo Redentor</p>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section id="experiencia">
-      <h2>Experiência Profissional</h2>
-      <ul>
-        <li><strong>EasyApps TI</strong> – Gerente de Projetos de TI (2021–atual)</li>
-        <li><strong>E‑SWG</strong> – Gerente de Produtos (2020–2021)</li>
-        <li><strong>Khor TI</strong> – Gerente de Projetos (2003–2017)</li>
-        <li><strong>Plansul</strong> – Desenvolvedor de Sistemas (2002–2003)</li>
-        <li><strong>Kopp Tecnologia</strong> – Desenvolvedor de Sistemas (1999–2002)</li>
-      </ul>
+      <div class="content-wrapper">
+        <h2>Minha Trajetória</h2>
+        <div class="experience-timeline">
+          <div class="experience-item">
+            <h4>Gerente de Projetos de TI</h4>
+            <p class="company">EasyApps TI</p>
+            <p class="period">2021 - atual</p>
+          </div>
+
+          <div class="experience-item">
+            <h4>Gerente de Produtos</h4>
+            <p class="company">E-SWG</p>
+            <p class="period">2017 - 2021</p>
+          </div>
+
+          <div class="experience-item">
+            <h4>Gerente de Projetos de TI</h4>
+            <p class="company">Khor Tecnologia da Informação</p>
+            <p class="period">2003 - 2017</p>
+          </div>
+
+          <div class="experience-item">
+            <h4>Desenvolvedor de Sistemas</h4>
+            <p class="company">Plansul</p>
+            <p class="period">2002 - 2003</p>
+          </div>
+
+          <div class="experience-item">
+            <h4>Desenvolvedor de Sistemas</h4>
+            <p class="company">Kopp Tecnologia</p>
+            <p class="period">1999 - 2002</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="agradecimento">
+      <div class="content-wrapper">
+        <h2>Agradecimento</h2>
+        <div class="thank-you-content">
+          <p class="thank-you-text">
+            Agradeço por dedicar seu tempo para conhecer minha trajetória profissional.
+            Estou sempre aberto a novas oportunidades e parcerias que possam agregar valor
+            tanto para mim quanto para a organização.
+          </p>
+          <p class="thank-you-text">
+            Se você se identificou com meu perfil e gostaria de conversar sobre possíveis
+            colaborações, estou à disposição para um bate-papo. Seria um prazer conhecer
+            mais sobre seus projetos e como posso contribuir para o sucesso da sua empresa.
+          </p>
+          <div class="contact-highlight">
+            <h3>Vamos conversar?</h3>
+            <div class="contact-methods">
+              <a href="https://wa.me/5548999892028?text=Olá%20Samuel!%20Vi%20seu%20portfólio%20e%20gostaria%20de%20conversar%20sobre%20oportunidades%20profissionais."
+                target="_blank" class="contact-highlight-item">
+                <i class="fab fa-whatsapp"></i>
+                <span>+55 48 99989-2028</span>
+              </a>
+              <a href="https://www.linkedin.com/in/samuel-walter-gauer/" target="_blank" class="contact-highlight-item">
+                <i class="fab fa-linkedin"></i>
+                <span>LinkedIn</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
   </div>
 
+  <script>
+    // Dados completos dos projetos
+    const projectsData = [
+      {
+        title: "Sistema de Gestão Empresarial Integrado",
+        period: "2021 - Atual",
+        company: "EasyApps TI",
+        role: "Gerente de Projetos de TI",
+        description: [
+          "Esse projeto me proporcionou a oportunidade de aprofundar meus conhecimentos em <b>desenvolvimento para plataformas móveis</b>, atuando diretamente na criação de aplicações para <b>iOS e Android</b> por meio de tecnologias <b>híbridas</b>, com foco em desempenho, escalabilidade e experiência do usuário.",
+          "Ao longo do desenvolvimento, explorei de forma estratégica os recursos da arquitetura serverless com Firebase, o que permitiu <b>reduzir significativamente os custos de infraestrutura</b>, mantendo alta disponibilidade e agilidade nas entregas. Essa combinação entre mobile e backend enxuto foi essencial para construir <b>soluções tecnicamente eficientes e financeiramente viáveis</b>.",
+          "Com essa expertise, consegui entregar projetos robustos, com alto valor agregado e excelente relação custo-benefício — contribuindo diretamente para a <b>sustentabilidade e rentabilidade do produto</b>."
+        ],
+        tech: "Flutter, Node.js, Python, GCP, Firebase",
+        results: [
+          "Validação do MVP com base sólida de clientes",
+          "Redução significativa nos custos de infraestrutura",
+          "Alta disponibilidade e agilidade nas entregas",
+          "Soluções tecnicamente eficientes e financeiramente viáveis"
+        ]
+      },
+      {
+        title: "Plataforma de E-commerce Mobile",
+        period: "2017 - 2021",
+        company: "E-SWG",
+        role: "Gerente de Produtos",
+        description: [
+          "Atuei como <b>Gerente de TI</b>, liderando uma equipe multidisciplinar composta por desenvolvedores, analistas, designers e profissionais de suporte. Minha responsabilidade foi desde o alinhamento estratégico até a execução técnica do projeto, promovendo a integração entre as áreas e garantindo a entrega de valor contínuo.",
+          "Além da gestão da equipe, tive participação ativa na <b>concepção do produto</b>, colaborando com a definição de funcionalidades, escopo técnico e decisões de arquitetura. Esse envolvimento desde o início foi fundamental para garantir que a solução atendesse às reais necessidades dos usuários e estivesse alinhada aos objetivos do negócio.",
+          "Essa experiência reforçou minha capacidade de liderança, visão sistêmica e atuação estratégica, equilibrando gestão, tecnologia e entrega de resultados."
+        ],
+        tech: "C#, VueJS, PostgreSQL",
+        results: [
+          "MVP aceito pelo cliente com satisfação",
+          "Liderança de equipe multidisciplinar",
+          "Concepção e desenvolvimento do produto",
+          "Integração entre áreas e entrega de valor contínuo"
+        ]
+      },
+      {
+        title: "Sistema de Gestão Administrativa",
+        period: "2001 - 2017",
+        company: "Khor Tecnologia da Informação",
+        role: "Gerente de Projetos, Analista, Desenvolvedor",
+        description: [
+          "Neste projeto, tive a oportunidade de atuar por mais de 15 anos, o que me permitiu vivenciar todas as fases e funções possíveis dentro de uma grande equipe multidisciplinar. Ao longo desse período, exerci diferentes papéis conforme as demandas e a evolução do projeto: atuei como <b>desenvolvedor, analista de sistemas, gerente de projeto, responsável por recrutamento e formação de equipe</b>, além de conduzir <b>treinamentos com usuários e representar o projeto em apresentações nacionais</b>.",
+          "Essa trajetória longa e diversa me proporcionou uma visão completa do ciclo de vida do software e da operação dos clientes. Estar envolvido diretamente com a estratégia, com as decisões técnicas e com o relacionamento com stakeholders foi essencial para meu amadurecimento profissional e pessoal.",
+          "Foi um projeto transformador, onde aprendi a importância da colaboração, da escuta ativa e da capacidade de adaptação para entregar valor contínuo, liderar times e construir soluções tecnológicas de impacto real."
+        ],
+        tech: "C#, Delphi, SQL Server, Crystal Reports, APIs",
+        results: [
+          "Desenvolvimento de um ERP completo, com mais de 30 módulos",
+          "Implementado em todas os 200+ escritórios regionais",
+          "Integração de todos os processos administrativos",
+          "Eficiência no processamento administrativo"
+        ]
+      },
+      {
+        title: "Sistema de Processamento de Imagens",
+        period: "1998 - 2001",
+        company: "Kopp Tecnologia",
+        role: "Analista/Desenvolvedor, Líder de Equipe",
+        description: [
+          "Tive a oportunidade de participar deste projeto desde o seu início, quando a empresa delegou exclusivamente a mim toda a responsabilidade pelo desenvolvimento da solução. Assumi desde o levantamento de requisitos, análise técnica, arquitetura e implementação, até os testes e validações finais.",
+          "Após o lançamento da primeira versão, atuei diretamente na instalação do sistema em clientes, além de conduzir os treinamentos com os usuários finais, o que me proporcionou um contato valioso com o dia a dia real da operação. Isso me permitiu entender profundamente as dores do cliente e ajustar a solução de forma mais precisa e eficaz.",
+          "Com o crescimento do número de clientes e da demanda, o projeto evoluiu e a equipe foi expandida. Nesse momento, assumi o papel de <b>líder de equipe</b>, coordenando os desenvolvedores, organizando o backlog, priorizando entregas e mantendo a proximidade com o cliente e as áreas internas da empresa.",
+          "Foi um trabalho extremamente enriquecedor, onde pude atuar de ponta a ponta — desde a concepção até a entrega e evolução contínua do produto — unindo visão técnica, empatia com o cliente e habilidades de liderança."
+        ],
+        tech: "Delphi, Firebase, Integração com APIs",
+        results: [
+          "Agilidade no processamento de multas",
+          "Melhor aproveitamento de imagens capturadas",
+          "Aumento significativo na conversão das infrações de trânsito",
+          "Sistema compatível com todos Departamentos de Trânsito Estaduais"
+        ]
+      }
+    ];
+
+    // Função para abrir o modal
+    function openProjectModal(projectIndex) {
+      console.log('Abrindo modal para projeto:', projectIndex);
+
+      // Verificar se o projeto existe
+      if (!projectsData[projectIndex]) {
+        console.error('Projeto não encontrado:', projectIndex);
+        return;
+      }
+
+      const project = projectsData[projectIndex];
+      const modal = document.getElementById('projectModal');
+
+      // Verificar se o modal existe
+      if (!modal) {
+        console.error('Modal não encontrado');
+        return;
+      }
+
+      // Preencher os dados do modal
+      document.getElementById('modalTitle').textContent = project.title;
+      document.getElementById('modalPeriod').textContent = project.period;
+      document.getElementById('modalCompany').textContent = project.company;
+      document.getElementById('modalRole').textContent = project.role;
+
+      // Preencher descrição
+      const descriptionHtml = project.description.map(p => `<p>${p}</p>`).join('');
+      document.getElementById('modalDescription').innerHTML = descriptionHtml;
+
+      // Preencher tecnologias
+      document.getElementById('modalTech').textContent = project.tech;
+
+      // Preencher resultados
+      const resultsHtml = project.results.map(result => `<li>${result}</li>`).join('');
+      document.getElementById('modalResults').innerHTML = resultsHtml;
+
+      // Mostrar modal
+      modal.classList.add('active');
+      document.body.style.overflow = 'hidden'; // Previne scroll da página
+      console.log('Modal aberto com sucesso');
+    }
+
+    // Função para fechar o modal
+    function closeProjectModal() {
+      const modal = document.getElementById('projectModal');
+      modal.classList.remove('active');
+      document.body.style.overflow = ''; // Restaura scroll da página
+    }
+
+    // Fechar modal com tecla ESC
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') {
+        closeProjectModal();
+      }
+    });
+
+    // Controle da barra flutuante
+    function handleScroll() {
+      const navbar = document.getElementById('floatingNavbar');
+      const sobreSection = document.getElementById('sobre');
+
+      if (!navbar || !sobreSection) {
+        return;
+      }
+
+      const sobreTop = sobreSection.offsetTop;
+      const sobreHeight = sobreSection.offsetHeight;
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      const windowHeight = window.innerHeight;
+
+      // Mostra a barra quando a seção "sobre" sair completamente da tela
+      const shouldShow = scrollTop > sobreTop + sobreHeight - windowHeight;
+
+      if (shouldShow) {
+        navbar.classList.add('visible');
+      } else {
+        navbar.classList.remove('visible');
+      }
+    }
+
+    // Event listener simples para scroll
+    window.addEventListener('scroll', handleScroll);
+
+    // Executar uma vez no carregamento para definir o estado inicial
+    document.addEventListener('DOMContentLoaded', function () {
+      handleScroll(); // Estado inicial
+      console.log('DOM carregado, scroll listener ativo');
+    });
+
+    // Teste dos botões quando a página carregar
+    document.addEventListener('DOMContentLoaded', function () {
+      console.log('Página carregada, testando botões...');
+
+      // Verificar se todos os botões existem
+      const botoes = document.querySelectorAll('.saiba-mais-btn');
+      console.log('Botões encontrados:', botoes.length);
+
+      botoes.forEach((botao, index) => {
+        console.log(`Botão ${index}:`, botao);
+        botao.addEventListener('click', function (e) {
+          console.log(`Botão ${index} clicado!`);
+        });
+      });
+
+      // Fechar modal ao clicar fora dele
+      const modal = document.getElementById('projectModal');
+      if (modal) {
+        modal.addEventListener('click', function (e) {
+          if (e.target === this) {
+            closeProjectModal();
+          }
+        });
+      }
+    });
+  </script>
+
+  <!-- Modal para projetos -->
+  <div class="project-modal" id="projectModal">
+    <div class="project-modal-content">
+      <button class="project-modal-close" onclick="closeProjectModal()">&times;</button>
+      <div class="project-modal-header">
+        <h3 id="modalTitle"></h3>
+        <span class="project-modal-period" id="modalPeriod"></span>
+        <p class="project-modal-company" id="modalCompany"></p>
+        <p class="project-modal-role" id="modalRole"></p>
+      </div>
+      <div class="project-modal-description" id="modalDescription"></div>
+      <div class="project-modal-tech">
+        <h4>Tecnologias</h4>
+        <p id="modalTech"></p>
+      </div>
+      <div class="project-modal-results">
+        <h4>Resultados</h4>
+        <ul id="modalResults"></ul>
+      </div>
+    </div>
+  </div>
+
 </body>
+
 </html>
